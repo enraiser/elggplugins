@@ -1,0 +1,42 @@
+Below is a little more reference (the example code uses a slightly different approach in instantiating the contacts importer classes)
+
+[zip file]/Svetlozar.NET/ContactsHelper.php:
+
+/**
+ * If the class name is found
+ * @param string $class_name (must be the key portion of ContactsClasses, including the .ext part if given)
+ * @param mixed $options (any number of options needed to instantiate the class)
+ * @return SPContactsBase (subclass of)
+ */
+public static function GetInstance($file_name)
+{
+$options = func_get_args();
+array_shift($options); //!< throw the first element out, it's already in class name
+if(!self::IncludeClassFile($file_name))
+{
+return null;
+}
+
+$name_parts = explode('.', $file_name);
+$class_name = $name_parts[0];
+if (count($name_parts) > 1 && strtolower($name_parts[1]) == "ext")
+{
+$class_name .= "ExtAuth";
+}
+
+return new $class_name($options);
+}
+
+This is a static method so your call would be like:
+$contacts_importer = ContactsHelper::GetInstance("Hotmail", "email@hotmail.com", "password");
+$contacts = $contacts_importer->contacts;
+// if no contacts check $contacts_importer for error
+
+The complete call to GetInstance is:
+ContactsHelper::GetInstance("ClassName[.ext]", "[email@domain.com]", "[password]", "[captcha_input]", "[state_string]");
+
+Anything in square brackets may or main not be required (and you aren't likely to get errors if you miss it), if the contacts importer class is of external type you need to provide  ".ext" along with it (it corresponds to the file names for each contacts importer class *excluding* the file extension .php), email and password are only necessary for the non-external authentication classes, captcha input and state associated with it is for Gmail (non-external) which need to be provided with the username and password. (Captcha response is returned very rarely, you may choose to not use this feature and just return generic error if the error returned is captcha, that will probably cover 99% of the cases)
+
+External authentication classes do not require any parameters on the first call (before redirecting user to authorize the request), on the subsequent calls state information needs to be passed to them via RestoreState (and you must get the state info on each call via GetState method on those class instances, the example code stores it in session and passes it back on next call from session)
+
+I would recommend following the code in example/contacts.main.php (it is a little different approach than using GetInstance above but it may help you understand better what needs to be done on each step), I've tried to comment every other line in that file. Also there is example.doc.html with additional comments. And of course if you run into something else that you want to ask, please do. I may be reworking some of the documentation eventually, so any suggestions to simplify things or any feedback (or questions - it gives me an idea of what might need to be clarified further) will be appreciated.

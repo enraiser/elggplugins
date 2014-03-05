@@ -1,0 +1,136 @@
+<html>
+/*! \page page1 Example Code Documentation
+<head>
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="Content-Type">
+<title>Svetlozar.NET Contacts Importer</title>
+</head>
+<body>
+<span style="font-weight: bold;">Example Code Documentation<br>
+<br>
+<br>
+./index.php:</span><br>
+All logic moved to ContactsHandler class (./example/contacts.main.php)<br>
+<div style="margin-left: 40px;">
+<pre>include_once 'example/contacts.main.php';</pre>
+<pre>$handler = new ContactsHandler();</pre>
+<pre>$handler-&gt;handle_request($_POST);</pre>
+</div>
+<br>
+<span style="font-weight: bold;">./example/contacts.main.php</span>
+(this is where most of the code is, the rest of the files are templates
+for forms and pages)<br>
+&nbsp;&nbsp;&nbsp; Please see comments within the file, I've tried
+tried to explain almost every single step<br>
+&nbsp;&nbsp;&nbsp; The main method is handle_request<br>
+<br>
+<span style="font-weight: bold;">Forms:</span><br>
+A note for all forms: the instance of ContactsHandler is made available
+in the forms (so $this-&gt;[property] points to propery of
+ContactsHandler), forms are loaded within handle_request scope<br>
+<br>
+<span style="font-weight: bold;">./example/contacts.import.php</span><br>
+&nbsp;&nbsp;&nbsp; Based on the type of contacts importer class display:<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - username and password (+
+captcha if captcha response is returned)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - or just a button to open the
+external authentication window<br>
+<br>
+<span style="font-weight: bold;">./example/contacts.invite.php</span><br>
+&nbsp;&nbsp;&nbsp; Display a list of imported contacts for user
+selection (if your implementation requires to do so)<br>
+<br>
+<span style="font-weight: bold;">./example/contacts.done.php</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Any feedback to the user after
+submitting selected contacts<br>
+<br>
+<span style="font-weight: bold;">./contacts.page.php</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp; Javascript documentation:<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; Important parts<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span
+style="font-weight: bold;">form_ready</span> global (available to the
+whole page) is set to True if the form is simple import form
+(username/password), or for external authentication forms, it is True
+only after the user clicks the button for external authentication (used
+in the onclick event of the button so that form submission is not
+triggered during opening the external authentication window)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; External authentication does trigger form submission
+but only when the user goes through the process of authorizing the
+request (at that point the popup window calls back its parent window
+and as a result the form is submitted with any additional data that the
+popup window may provide)<br>
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; More Javascript
+(second block)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; (function(){...}) is used to create local scope (not
+creating any globals, not necessary otherwise)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">external_auth</span>
+- url to the page that will handle external authentication redirection
+(url used in opening the popup window)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">submit_form</span>
+- replaces (wraps) the onsubmit event of the form (it is a decorator),
+makes sure the form is only submitted when form_ready is true and opens
+up the external authentication window otherwise<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">toggle_checked</span>,
+<span style="font-weight: bold;">cancel_propagation</span>, <span
+style="font-weight: bold;">set_checked</span> - provided for user
+friendliness (allow for checking all checkboxes at once, clicking on
+table row toggles on/off the checkbox on that row), you may use any
+javascript library to provide the same<br>
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; The last part of the javascript code is where the
+form submit event is wrapped in a call to submit_form<br>
+<br>
+<div style="margin-left: 40px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+var import_form = document.getElementById("import_form");<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (import_form)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+import_form.onsubmit = submit_form(import_form);<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+<br>
+<span style="font-weight: bold;"></span><br>
+</div>
+<span style="font-weight: bold;">./external.php</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; Contains definition of ExternalAuthHandler which
+overrides handle_request from ContactsHandler (again, it will be most
+useful if you follow the comments in the code for handle_request)<br>
+<br>
+<span style="font-weight: bold;">./example/external.page.php</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; A template page for the external
+authentication page<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <span style="font-weight: bold;">QueryParms
+</span>= the query string parsed into dictionary (or associative array
+in PHP terms), we need to extract oauth_verifier from it when the user
+authorizes the request<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">ReturnToParent()</span>
+- sets form_ready in the parent window to true, and passes
+oauth_verifier to ImportContacts function in the parent window (which
+will trigger submission of the form with oauth_verifier as part of the
+"state" of the form)<br>
+<br>
+<br>
+<span style="font-weight: bold;">Settings<br>
+Svetlozar.NET/settings.php </span>(comments include urls for getting
+private keys/secret for your application. I could not find one for
+Plaxo)<span style="font-weight: bold;"><br>
+</span>&nbsp;&nbsp;&nbsp; Sign up for your own keys and enter them here<span
+style="font-weight: bold;"><span style="font-weight: bold;"> </span></span>(this
+file may remotely look like a file of global definitions but it is
+actually included within the scope of SPUserSettings::init())<span
+style="font-weight: bold;"><br>
+</span>
+</body>
+*/
+</html>
+

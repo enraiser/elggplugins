@@ -1,0 +1,30 @@
+
+
+
+plan for 0.5
+
+About Friends and Mine, in insertblog.
+change menu to elgg menus.  
+create menu view and isert intems.
+Clean some code.(insertblog :it looks ugly)
+
+
+
+
+plan for 0.4
+Fixed this bug of permission.
+majror bug :there is a bug thant non-owner members can edit.
+0.3
+
+Taken inputs from 'JayS from Emmaus Road Society'
+Language support.
+Support sitewide search.
+Support for creating River entry and River comments.
+ BUGFIX: If the site url is deeper then domain name then  some html links dont work.
+0.2 
+BUGFIX : elgg_get_entity gives only 10 obj
+BUGFIX : insertblog and removeblog was not working at all for others  sites.
+0.1 basic features
+
+
+

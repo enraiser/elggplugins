@@ -1,0 +1,128 @@
+body,div,h1,h2,h3,ul,li,a,form,td,tr,table {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+td { overflow:hidden; }
+
+html,body {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+body {
+	background-color: #E1EEF4;
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+	padding: 0.2em;
+}
+
+.center {
+	text-align: center;
+}
+
+.content {
+	width: 40em;
+	background-color: white;
+	margin: 0.5em auto 0.5em auto;
+	padding: 0;
+	border: #BCE3FF solid 1px;
+	text-align: left;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	vertical-align: top;
+}
+
+h1 {
+	width: auto;
+	font-size: 2em;
+	text-align: right;
+	font-family: inherit;
+	padding: 1em;
+	color: #F4343F
+}
+
+h3 {
+	width: auto;
+	font-size: 1.4em;
+	text-align: right;
+	font-family: inherit;
+	font-style: normal;
+	color: #212A2B
+}
+
+ul#menu {
+	width: 12em;
+	display: block;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+ul#menu * {
+	color: #212A2B;
+}
+
+ul#menu li {
+	display: block;
+}
+
+ul#menu li a {
+	display: block;
+	text-decoration: none;
+	padding: 0.7em;
+	width: 100%;
+	border-bottom: 1px solid #D8CFC0;
+}
+
+ul#menu li a:hover {
+	background-color: #F5F3F0;
+	color: #FF5756;
+}
+
+#importform {
+	float: right;
+	width: 22em;
+	padding-top: 0.5em;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+#importform table {
+	width: auto;
+	margin: auto;
+}
+
+#inviteform {
+	width: 100%;
+	padding-top: 3em;
+	font-size: 1.2em;
+	overflow: hidden;
+}
+
+#inviteform table tr:hover {
+	background-color: #F5F3F0;
+}
+
+#inviteform h3 { text-align:right; padding-right:1em; }
+
+th,td {
+	padding: 4px;
+	text-align: left;
+}
+
+.copy,.copy * {
+	color: #939CA6;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FF5756;
+}
+
+.clear {
+	clear: both;
+}
