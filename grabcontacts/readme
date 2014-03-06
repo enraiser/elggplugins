@@ -1,0 +1,8 @@
+Plugin page http://community.elgg.org/plugins/1602592/grabcontacts
+My site  : http://enraiser.com
+
+I have  wrapped PHP Contacts Importer (Yahoo, Gmail, Plaxo, Hotmail, AOL) by Svetlozar.NET (Svetlozar Petrov), here as an ELGG plugin.
+
+After enabeling the plugin go to http://yoursite/invite,
+
+You can also copy the code of forms/invitefriedgraber.php and use in other plugin too.
