@@ -1,12 +1,5 @@
 <?php
 
-    function enriver_onGroupList($mynumber, $groupList)
-    {
-        foreach($groupList as $group){
-           // echo $group['subject']."=>".$group['id'];
-            //echo "<br>----------------------<br>";
-        }
-    }
     function enriver_onCodeRequest($mynumber, $method,$length)
     {
 
@@ -52,7 +45,7 @@
             $content .="<input type='submit' name='submit'></form>";
         }elseif($step =='3'){
             require elgg_get_plugins_path().'enriver/vendors/whatsapi/whatsprot.class.php';
-            $wa = new WhatsProt($group->whatsapp_mobile,$group->whatsapp_imei,$group->whatsapp_name , true);
+            $wa = new WhatsProt($group->whatsapp_mobile,$group->whatsapp_imei,$group->whatsapp_name , false);
             $wa->eventManager()->bind("onCodeRegister", "enriver_onCodeRegister");
              $wa->connect();
       
@@ -62,7 +55,7 @@
             }
             $content = "<h2>Send Test message to other phone number,(make sure other phone has ".$group->whatsapp_mobile." in contact. ";
             $content .="<form method='post' action='".elgg_get_site_url()."enriver/setup/whatsapp/$segments[2]/4'>";
-            $content .="<label>Mobile Number&nbsp</label> <input type='text' style='width:400px; name='testmobile'>";
+            $content .="<label>Mobile Number&nbsp</label> <input type='text' style='width:400px;' name='testmobile'>";
             $content .="<br><input type='submit'class='elgg-button elgg-button-action' name='submit'></form>";
         }elseif($step =='4'){
            // echo $group->whatsapp_mobile."".$group->whatsapp_password;
@@ -70,8 +63,8 @@
             $wa = new WhatsProt($group->whatsapp_mobile,$group->whatsapp_imei,$group->whatsapp_name , false);
             $wa->connect();
             $wa->loginWithPassword($group->whatsapp_password);
-            $wa->sendSetProfilePicture($group->getIconURL());
-            $wa->sendMessage($_POST['testmobile'], "You have done it,/rVisit http://enraiser.com visit  http://Kindit.org ");
+           // $wa->sendSetProfilePicture($group->getIconURL());
+            $wa->sendMessage($_POST['testmobile'], "You have done it,Visit http://enraiser.com visit  http://Kindit.org ");
                        for($i = 0; $i < 5; $i++) {
                 $wa->pollMessages();
             }
@@ -88,18 +81,11 @@
                     $wa->sendMessage($member->mobile, $_POST['groupmessage']);
                 }
             }
-            //$wa->sendBroadcastMessage($targets, $_POST['groupmessage']);
 
             for($i = 0; $i < 5; $i++) {
                 $wa->pollMessages();
             }
             $content = "check now";
-  //  $wa->eventManager()->bind("onGetGroups", "enriver_onGroupList");
-    
- //   $wa->sendGetGroups();
-  //  for($i = 0; $i < 5; $i++) {
-  //      $wa->pollMessages();
-  //  }
 
     $content = "<h2 class='elgg-heading-main'>done</h2><br><br>";
     }
