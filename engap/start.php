@@ -25,11 +25,11 @@ function engape_init() {
                 );
 	expose_function("list.entity",
                 "eg_list_entity",
-                 array("type" => array('type' => 'string'),"subtype" => array('type' => 'string'),"offset" => array('type' => 'string'),"limit" => array('type' => 'string')),
+                 array("type" => array('type' => 'string'),"subtype" => array('type' => 'string'),"offset" => array('type' => 'string'),"limit" => array('type' => 'string'),"extra" => array('type' => 'string')),
                  'provide list of entity',
                  'GET',
                  false,
-                 false
+                 true
                 );
     expose_function("get.entity",
                     "eg_get_entity",
@@ -47,12 +47,32 @@ function engape_init() {
                     false,
                     true
                     );
-    
+	expose_function(
+		"engap.gettoken",
+		"engap_gettoken",
+		array(
+			'username' => array ('type' => 'string'),
+			'password' => array ('type' => 'string'),
+		),
+		elgg_echo('engap.gettoken'),
+		'POST',
+		false,
+		false
+	);
+
     elgg_register_page_handler('engap', 'engap_page_handler');
 
  }
-    
-    
+
+function engap_gettoken($username, $password) {
+	//error_log("user".$username);
+	$return['token'] = auth_gettoken($username, $password);
+	$user = get_user_by_username($username);
+	$return['user_guid'] = $user->guid;
+	$return['username'] = $username;
+	return $return;
+}
+ 
 function engap_page_handler($segments)
 {
      header('Access-Control-Allow-Origin: *');
@@ -114,29 +134,29 @@ function eg_list_river($offset,$type,$refreshlist,$extra){
     $owner_guid = elgg_get_logged_in_user_guid();
 
     $db_prefix = elgg_get_config('dbprefix');
-    $option = array(
-      'wheres'=>array("rv.id > ".$offset),
-      'limit' =>100,
-
-    );
+    
     if($type='newsfeed'){
-        $option['joins'] = array("JOIN {$db_prefix}entities object ON object.guid = rv.object_guid");
-        $option['wheres'] = array("
+		$option = array(
+			'limit' =>100,
+			'joins' => array("JOIN {$db_prefix}entities object ON object.guid = rv.object_guid"),
+			'wheres' => array("
                           rv.id > $offset AND (
                           rv.subject_guid = $owner_guid
                           OR rv.subject_guid IN (SELECT guid_two FROM {$db_prefix}entity_relationships WHERE guid_one=$owner_guid AND relationship='follower')
                           OR rv.subject_guid IN (SELECT guid_one FROM {$db_prefix}entity_relationships WHERE guid_two=$owner_guid AND relationship='friend'))
-                          ");
+                      "),
+        );
+
         $river_list= elgg_get_river($option);
-                          
-    }elseif ($type='timeline'){
+ 
+	}elseif ($type='timeline'){
                 if($extra == 'self')$extra = $owner_guid ;
                     $sql2 .= " FROM {$dbprefix}river rv ";
                     $sql2 .= " WHERE (rv.object_guid = $extra)";
                     $sql2 .= " OR    (rv.subject_guid = $extra)";
                     
                     $sql1 = "SELECT count(DISTINCT rv.id) as total";
-                    $total = get_data_row($sql1.$sql2);
+                    //$total = get_data_row($sql1.$sql2);
                     
                     $sql1 = "SELECT DISTINCT rv.*";
                     $sql3 .= " ORDER BY rv.posted desc LIMIT {$offset},15";
@@ -154,7 +174,11 @@ function eg_list_river($offset,$type,$refreshlist,$extra){
                  $return['refresh'][$objid]['icontime']= $it;
            }
      }
-                                  
+    // Here you can chage site version to force the devices to cleanup the cached pages
+    $return['site_version'] = '002';
+    //TBD what if there is no data
+    if($river_list and count($river_list) >0){
+        error_log('river list size' . count($river_list));                    
 	foreach($river_list as $riverobj){
 		$subject = $riverobj->getSubjectEntity();
 		$obj = $riverobj->getObjectEntity();
@@ -164,7 +188,7 @@ function eg_list_river($offset,$type,$refreshlist,$extra){
          $subtype = $riverobj->subtype ? $riverobj->subtype : 'default';
         if($riverobj->type =='comment'){
             $key = "river:comment:$type:$subtype";
-            $summary = "k1".elgg_echo($key, array($subject->name, "junk"));
+            $summary = elgg_echo($key, array($subject->name, "junk"));
         }elseif($riverobj->type =='user' and $action =='update'){
   
                     if($riverobj->view == 'river/user/default/profileiconupdate'){
@@ -194,9 +218,12 @@ function eg_list_river($offset,$type,$refreshlist,$extra){
             $return['refresh'][$subject->getGUID()]['icontime']= $it;
         }
 	}
+ 	}else{
+        $return['message'] = "TimeLine is not built yet.";
+    }
     return $return;
 }
-function eg_list_entity($type,$subtype,$offset,$limit){
+function eg_list_entity($type,$subtype,$offset,$limit,$extra){
     $option = array(
                     'type'=>$type,
                     'offset'=>$offset,

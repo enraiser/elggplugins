@@ -11,13 +11,14 @@
 <ons-template id="home">
   <ons-page id='home-page'  style="background-color: #f9f9f9;" >
     <ons-toolbar>
-        <div class="center">Kindit</div>
+        
+		<div class="center" ng-controller="site_nameController">{{site_name}}</div>
         <div class="right" style="margin-right:15px;">
             <ons-icon icon="ion-android-share" onclick='load_page("sharepage");'></ons-icon>
             <ons-icon icon="ion-navicon-round" onclick="sidebar();"></ons-icon>
         </div>
     </ons-toolbar>
-   <newsfeed   pagination='true'></newsfeed>
+   <newsfeed pagination='true'></newsfeed>
    <sidebar>
         <ons-list>
             <ons-list-header>ELGG Sidebar</ons-list-header>
