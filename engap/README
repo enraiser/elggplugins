@@ -4,7 +4,7 @@ Developer can build Pages,Views and theme and keep the files on server.
 
 This elgg plugin enables you to see the mobile app of your ELGG site. in quick 3 steps.
 
-(0) activate web-service plugin for 1.9.
+(0) activate web-service plugin for 1.9 (onward).
 
 (1) install and activate enGap plugin.
 
@@ -13,6 +13,7 @@ This elgg plugin enables you to see the mobile app of your ELGG site. in quick 3
     android play-store :https://play.google.com/store/apps/details?id=com.enraiser.engap
 
     iPhone app-store : https://itunes.apple.com/us/app/engap/id945681327
+[0.0.6 version is yet not aproved by apple,So untill then dont use iOS app]
 
 (3)Configure the app with your site-name and site-URL(with forward slash /, like http://xyz.com/)
 
