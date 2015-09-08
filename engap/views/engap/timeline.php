@@ -7,7 +7,7 @@
         </div>
     </ons-toolbar>
 
-<timeline   pagination='true'></timeline>
+<timeline limit='9'></timeline>
 
 </ons-page>
 

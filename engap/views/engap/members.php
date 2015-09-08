@@ -7,7 +7,7 @@
         </div>
     </ons-toolbar>
 
-  <elggentitylist  type='user'  subtype='default'  pagination='true'></elggentitylist>
+  <elggentitylist  type='user'  subtype='default'  limit='11'></elggentitylist>
 <sidebar>
 <ons-list>
 <ons-list-header>ELGG Sidebar</ons-list-header>

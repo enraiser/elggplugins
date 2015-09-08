@@ -16,5 +16,5 @@
 <?php echo "Name      : ".$user->name; ?><br>
 <?php echo "E-mail    : ".$user->email; ?><br>
 
-<timeline  subjectguid='<?php echo $user_guid;?>'  pagination='true'></timeline>
+<timeline  subjectguid='<?php echo $user_guid;?>'  ></timeline>
 </ons-page>

@@ -18,7 +18,8 @@
             <ons-icon icon="ion-navicon-round" onclick="sidebar();"></ons-icon>
         </div>
     </ons-toolbar>
-   <newsfeed pagination='true'></newsfeed>
+	<thewire></thewire>
+   <newsfeed limit='11'></newsfeed>
    <sidebar>
         <ons-list>
             <ons-list-header>ELGG Sidebar</ons-list-header>
