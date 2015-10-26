@@ -12,7 +12,7 @@
 	MISC
 *****************************************/
 #dashboard-info {
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 	margin: 0 10px 15px;
 }
 .elgg-sidebar input[type=text],
@@ -144,8 +144,8 @@ html {
     }
 	.elgg-sidebar {
 		border-left: none;
-		border-top: 1px solid #DCDCDC;
-		border-bottom: 1px solid #DCDCDC;
+		border-top: 1px solid <?php echo $tabbgcolor; ?>;
+		border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
 		background-color: #FAFAFA;
 		width: 100%;
 		float: left;
@@ -169,12 +169,12 @@ html {
 	.elgg-menu-page,
 	.elgg-sidebar .elgg-menu-owner-block,
 	.elgg-menu-groups-my-status {
-		border-bottom: 1px solid #DCDCDC;
+		border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
 	}
 	.elgg-menu-page a,
 	.elgg-sidebar .elgg-menu-owner-block li a,
 	.elgg-menu-groups-my-status li a {
-		border-color: #DCDCDC;
+		border-color: <?php echo $tabbgcolor; ?>;
 		border-style: solid;
 		border-width: 1px 1px 0 1px;
 		margin: 0;

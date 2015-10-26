@@ -9,7 +9,7 @@
 
 /* Aside */
 .elgg-module-aside .elgg-head {
-	border-bottom: 1px solid #DCDCDC;
+	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
 
 	margin-bottom: 5px;
 	padding-bottom: 5px;
@@ -31,7 +31,7 @@
 /* Popup */
 .elgg-module-popup {
 	background-color: #FFF;
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 	z-index: 9999;
 	margin-bottom: 0;
 	padding: 5px;
@@ -63,7 +63,7 @@
 
 /* Featured */
 .elgg-module-featured {
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 	border-radius: 3px;
 }
 .elgg-module-featured > .elgg-head {
@@ -71,7 +71,7 @@
 	padding: 10px;
 	height: auto;
 	overflow: hidden;
-	border-bottom: 1px solid #DCDCDC;
+	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
 	box-shadow: inset 0 0 1px #FFFFFF;
 }
 .elgg-module-featured > .elgg-head * {
@@ -125,7 +125,7 @@
 }
 
 .elgg-module-widget {
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 	margin: 0 10px 15px;
 	position: relative;
 }
@@ -165,13 +165,13 @@ a.elgg-widget-collapsed:before {
 	background-color: #FFF;
 	width: 100%;
 	overflow: hidden;
-	border-top: 1px solid #DCDCDC;
+	border-top: 1px solid <?php echo $tabbgcolor; ?>;
 }
 .elgg-widget-edit {
 	display: none;
 	width: auto;
 	padding: 10px;
-	border-bottom: 1px solid #DCDCDC;
+	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
 	background-color: #F9F9F9;
 }
 .elgg-widget-content {

@@ -155,10 +155,10 @@ h6 { font-size: 0.8em; }
 	padding-left: .4em;
 }
 .elgg-output table {
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 }
 .elgg-output table td {
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 	padding: 3px 5px;
 }
 .elgg-output img {

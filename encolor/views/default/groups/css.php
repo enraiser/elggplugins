@@ -21,7 +21,7 @@
 
 .groups-profile-fields .odd,
 .groups-profile-fields .even {
-	border-bottom: 1px solid #DCDCDC;
+	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
 	padding: 5px 0;
 	margin-bottom: 0;
 }

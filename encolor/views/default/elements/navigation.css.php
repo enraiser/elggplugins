@@ -39,7 +39,7 @@
 	display: inline-block;
 	padding: 6px 15px;
 	color: #444;
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 }
 .elgg-pagination a:hover {
 	color: #999;
@@ -57,13 +57,13 @@
 *************************************** */
 .elgg-tabs {
 	margin-bottom: 5px;
-	border-bottom: 1px solid #DCDCDC;
+	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
 	display: table;
 	width: 100%;
 }
 .elgg-tabs li {
 	float: left;
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 	border-bottom: 0;
 	background: #eee;
 	margin: 0 0 0 5px;
@@ -82,7 +82,7 @@
 	color: #444;
 }
 .elgg-tabs .elgg-state-selected {
-	border-color: #DCDCDC;
+	border-color: <?php echo $tabbgcolor; ?>;
 	background: #FFF;
 }
 .elgg-tabs .elgg-state-selected a {
@@ -252,13 +252,13 @@
 *************************************** */
 .elgg-menu-filter {
 	margin-bottom: 5px;
-	border-bottom: 1px solid #DCDCDC;
+	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
 	display: table;
 	width: 100%;
 }
 .elgg-menu-filter > li {
 	float: left;
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 	border-bottom: 0;
 	background: #eee;
 	margin: 0 0 0 5px;
@@ -280,7 +280,7 @@
 	color: #444;
 }
 .elgg-menu-filter > .elgg-state-selected {
-	border-color: #DCDCDC;
+	border-color: <?php echo $tabbgcolor; ?>;
 	background: #FFF;
 }
 .elgg-menu-filter > .elgg-state-selected > a {

@@ -13,7 +13,7 @@ fieldset > div:last-child {
 	margin-bottom: 0;
 }
 .elgg-form-alt > fieldset > .elgg-foot {
-	border-top: 1px solid #DCDCDC;
+	border-top: 1px solid <?php echo $tabbgcolor; ?>;
 	padding: 10px 0;
 }
 label {
@@ -25,7 +25,7 @@ label.elgg-state-disabled {
 	opacity: 0.6;
 }
 input, textarea {
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 	color: #666;
 	font: 100% Arial, Helvetica, sans-serif;
 	padding: 7px 6px;
@@ -144,7 +144,7 @@ select {
 .friends-picker-navigation {
 	margin: 10px 0;
 	padding: 0 0 10px;
-	border-bottom: 1px solid #DCDCDC;
+	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
 }
 .friends-picker-navigation ul {
 	list-style: none;
@@ -231,7 +231,7 @@ select {
 }
 .ui-autocomplete {
 	background-color: #FFF;
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 	overflow: hidden;
 	border-radius: 3px;
 }
@@ -341,7 +341,7 @@ select {
 	text-decoration: none;
 }
 .ui-datepicker-calendar .ui-state-default {
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 	color: #5097CF;;
 	background: #FAFAFA;
 }

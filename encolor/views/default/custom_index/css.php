@@ -18,7 +18,7 @@
 	padding-left: 10px;
 }
 .elgg-module-highlight {
-	border: 1px solid #DCDCDC;
+	border: 1px solid <?php echo $tabbgcolor; ?>;
 }
 .elgg-module-highlight:hover {
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
