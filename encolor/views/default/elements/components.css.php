@@ -1,3 +1,4 @@
+<?php require  elgg_get_plugins_path()."encolor/colors.php"; ?>
 /**
  * Layout Object CSS
  *

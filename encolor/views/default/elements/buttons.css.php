@@ -1,3 +1,4 @@
+<?php require  elgg_get_plugins_path()."encolor/colors.php"; ?>
 /* **************************
 	BUTTONS
 ************************** */
@@ -20,7 +21,7 @@
 }
 .elgg-button-submit {	
 	border: 1px solid rgba(0, 0, 0, 0.2);
-	background: #4787B8;
+	background: <?php echo $darkheader;?> ;
 }
 .elgg-button-submit:hover,
 .elgg-button-submit:focus {
@@ -71,7 +72,7 @@
 .elgg-button-dropdown:focus,
 .elgg-button-dropdown.elgg-state-active {
 	color: #FFF;
-	background: #60B8F7;
+	background: <?php echo $headercolor; ?>;
 	text-decoration: none;
 }
 .elgg-button-special {

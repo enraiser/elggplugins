@@ -1,3 +1,8 @@
+<?php require  elgg_get_plugins_path()."encolor/colors.php"; ?>
+body {
+background-color:<?php echo $bodybgcolor;?> !important;
+    color: #333;
+}
 /**
  * CSS typography
  */

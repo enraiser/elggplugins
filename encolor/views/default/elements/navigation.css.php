@@ -1,3 +1,4 @@
+<?php require  elgg_get_plugins_path()."encolor/colors.php"; ?>
 /**
  * Navigation
  */
@@ -142,7 +143,7 @@
 }
 
 .elgg-menu-topbar > li > a:hover {
-	color: #60B8F7;
+	color: <?php echo $headercolor; ?>;
 	text-decoration: none;
 }
 
@@ -191,7 +192,7 @@
 }
 .elgg-menu-site > .elgg-state-selected > a,
 .elgg-menu-site > li:hover > a {
-	background-color: #60B8F7;
+	background-color: <?php echo $headercolor; ?>;
 	color: #FFF;
 }
 .elgg-menu-site > li > ul {

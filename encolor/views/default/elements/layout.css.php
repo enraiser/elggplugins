@@ -1,3 +1,4 @@
+<?php require  elgg_get_plugins_path()."encolor/colors.php"; ?>
 /**
  * Page Layout
  *
@@ -65,7 +66,7 @@
 .elgg-page-header {
 	padding: 5px 20px 10px;
 	position: relative;
-	background: #60B8F7;
+	background: <?php echo $headercolor; ?>;
 }
 .elgg-page-header > .elgg-inner {
 	position: relative;
@@ -74,7 +75,7 @@
 .elgg-page-navbar {
 	padding: 0 20px;
 	position: relative;
-	background: #4787B8;
+	background: <?php echo $darkheader;?>;
 }
 .elgg-page-navbar > .elgg-inner {
 	position: relative;

@@ -100,7 +100,7 @@ html {
 .elgg-button-nav:hover {
 	color: #FFF;
 	text-decoration: none;
-	background-color: #60B8F7;
+	background-color: <?php echo $headercolor; ?>;
 }
 .elgg-button-nav .icon-bar {
 	background-color: #F5F5F5;
@@ -297,7 +297,7 @@ html {
 	}
 	.elgg-menu-site-more > li.elgg-state-selected > a,
 	.elgg-menu-site-more > li > a:hover {
-		background-color: #60B8F7;
+		background-color: <?php echo $headercolor; ?>;
 		color: #FFF;
 	}
 }
