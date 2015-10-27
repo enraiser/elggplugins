@@ -36,7 +36,7 @@
 	width:30px;
 }
 #notificationstable td {
-	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
+	border-bottom: 1px solid <?php echo $tabbordercolor; ?>;
 	padding: 6px 0;
 }
 #notificationstable td.emailtogglefield input {

@@ -24,61 +24,6 @@ function entheme_init() {
 }
 
 
-/*
-   function toHsvFloat($rgb)
-    {
-        
-        
-        $rgbMin = min($rgb);
-        $rgbMax = max($rgb);
-        
-        $hsv = array(
-            'hue'   => 0,
-            'sat'   => 0,
-            'val'   => $rgbMax
-        );
-        
-        // If v is 0, color is black
-        if ($hsv['val'] == 0) {
-            return $hsv;
-        }
-        
-        // Normalize RGB values to 1
-        $rgb['red'] /= $hsv['val'];
-        $rgb['green'] /= $hsv['val'];
-        $rgb['blue'] /= $hsv['val'];
-        $rgbMin = min($rgb);
-        $rgbMax = max($rgb);
-        
-        // Calculate saturation
-        $hsv['sat'] = $rgbMax - $rgbMin;
-        if ($hsv['sat'] == 0) {
-            $hsv['hue'] = 0;
-            return $hsv;
-        }
-        
-        // Normalize saturation to 1
-        $rgb['red'] = ($rgb['red'] - $rgbMin) / ($rgbMax - $rgbMin);
-        $rgb['green'] = ($rgb['green'] - $rgbMin) / ($rgbMax - $rgbMin);
-        $rgb['blue'] = ($rgb['blue'] - $rgbMin) / ($rgbMax - $rgbMin);
-        $rgbMin = min($rgb);
-        $rgbMax = max($rgb);
-        
-        // Calculate hue
-        if ($rgbMax == $rgb['red']) {
-            $hsv['hue'] = 0.0 + 60 * ($rgb['green'] - $rgb['blue']);
-            if ($hsv['hue'] < 0) {
-                $hsv['hue'] += 360;
-            }
-        } else if ($rgbMax == $rgb['green']) {
-            $hsv['hue'] = 120 + (60 * ($rgb['blue'] - $rgb['red']));
-        } else {
-            $hsv['hue'] = 240 + (60 * ($rgb['red'] - $rgb['green']));
-        }
-        
-        return $hsv;
-    }
-    */
 function rgb2hex($rgb) {
    $hex = "#";
    $hex .= str_pad(dechex($rgb[0]), 2, "0", STR_PAD_LEFT);

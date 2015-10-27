@@ -14,7 +14,7 @@
 	margin-bottom: 15px;
 }
 .profile .elgg-inner {
-	border: 1px solid <?php echo $tabbgcolor; ?>;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
 	border-radius: 3px;
 }
 #profile-details {
@@ -25,7 +25,7 @@
 #profile-owner-block {
 	width: 200px;
 	float: left;
-	border-right: 1px solid <?php echo $tabbgcolor; ?>;
+	border-right: 1px solid <?php echo $tabbordercolor; ?>;
 	padding: 15px;
 }
 #profile-owner-block .large {
@@ -60,12 +60,12 @@
 	margin-top: 10px;
 }
 #profile-details .odd {
-	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
+	border-bottom: 1px solid <?php echo $tabbordercolor; ?>;
 	margin: 0;
 	padding: 5px 0;
 }
 #profile-details .even {
-	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
+	border-bottom: 1px solid <?php echo $tabbordercolor; ?>;
 	margin: 0;
 	padding: 5px 0;
 }

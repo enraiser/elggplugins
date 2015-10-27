@@ -13,7 +13,7 @@ fieldset > div:last-child {
 	margin-bottom: 0;
 }
 .elgg-form-alt > fieldset > .elgg-foot {
-	border-top: 1px solid <?php echo $tabbgcolor; ?>;
+	border-top: 1px solid <?php echo $tabbordercolor; ?>;
 	padding: 10px 0;
 }
 label {
@@ -25,7 +25,7 @@ label.elgg-state-disabled {
 	opacity: 0.6;
 }
 input, textarea {
-	border: 1px solid <?php echo $tabbgcolor; ?>;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
 	color: #666;
 	font: 100% Arial, Helvetica, sans-serif;
 	padding: 7px 6px;
@@ -144,7 +144,7 @@ select {
 .friends-picker-navigation {
 	margin: 10px 0;
 	padding: 0 0 10px;
-	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
+	border-bottom: 1px solid <?php echo $tabbordercolor; ?>;
 }
 .friends-picker-navigation ul {
 	list-style: none;
@@ -231,7 +231,7 @@ select {
 }
 .ui-autocomplete {
 	background-color: #FFF;
-	border: 1px solid <?php echo $tabbgcolor; ?>;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
 	overflow: hidden;
 	border-radius: 3px;
 }
@@ -240,14 +240,14 @@ select {
 	border-radius: 3px;
 }
 .ui-autocomplete .ui-menu-item:hover {
-	background-color: #EEE;
+	background-color: <?php echo $tabbgcolor; ?>;
 }
 .ui-autocomplete a:hover {
 	text-decoration: none;
 	color: #5097CF;
 }
 .ui-autocomplete a.ui-state-hover {
-	background-color: #EEE;
+	background-color: <?php echo $tabbgcolor; ?>;
 	display: block;
 }
 
@@ -341,14 +341,14 @@ select {
 	text-decoration: none;
 }
 .ui-datepicker-calendar .ui-state-default {
-	border: 1px solid <?php echo $tabbgcolor; ?>;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
 	color: #5097CF;;
 	background: #FAFAFA;
 }
 .ui-datepicker-calendar .ui-state-hover {
 	border: 1px solid #AAA;
 	color: #0054A7;
-	background: #EEE;
+	background: <?php echo $tabbgcolor; ?>;
 }
 .ui-datepicker-calendar .ui-state-active,
 .ui-datepicker-calendar .ui-state-active.ui-state-hover {

@@ -1,8 +1,8 @@
 <?php
 
-$headercolor= '#60B8F7'; //real
-//$headercolor = '#006400';//green //   yellowgrey '#FDF3E7';
-
+//$headercolor= '#60B8F7'; //real
+//$headercolor = '#006400';//green
+$headercolor = '#FDF3E7';//   yellowgrey ;
 $rgb = hex2rgb($headercolor);
    //  echo $color." = ".$rgb[0]."/".$rgb[1]."/".$rgb[2]." hm<br>";
 

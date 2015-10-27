@@ -28,7 +28,7 @@
 	clear: both;
 }
 .elgg-list > li {
-	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
+	border-bottom: 1px solid <?php echo $tabbordercolor; ?>;
 }
 .elgg-item h3 a {
 	padding-bottom: 4px;
@@ -66,11 +66,11 @@
 *************************************** */
 .elgg-table {
 	width: 100%;
-	border-top: 1px solid <?php echo $tabbgcolor; ?>;
+	border-top: 1px solid <?php echo $tabbordercolor; ?>;
 }
 .elgg-table td, .elgg-table th {
 	padding: 4px 8px;
-	border: 1px solid <?php echo $tabbgcolor; ?>;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
 }
 .elgg-table th {
 	background-color: #DDD;
@@ -83,15 +83,15 @@
 }
 .elgg-table-alt {
 	width: 100%;
-	border-top: 1px solid <?php echo $tabbgcolor; ?>;
+	border-top: 1px solid <?php echo $tabbordercolor; ?>;
 }
 .elgg-table-alt th {
-	background-color: #EEE;
+	background-color:<?php echo $tabbgcolor; ?>;
 	font-weight: bold;
 }
 .elgg-table-alt td, .elgg-table-alt th {
 	padding: 6px 0;
-	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
+	border-bottom: 1px solid <?php echo $tabbordercolor; ?>;
 }
 .elgg-table-alt td:first-child {
 	width: 200px;
@@ -167,10 +167,10 @@
 	River
 *************************************** */
 .elgg-river-layout .elgg-list-river {
-	border-top: 1px solid <?php echo $tabbgcolor; ?>;
+	border-top: 1px solid <?php echo $tabbordercolor; ?>;
 }
 .elgg-list-river > li {
-	border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
+	border-bottom: 1px solid <?php echo $tabbordercolor; ?>;
 }
 .elgg-river-item .elgg-pict {
 	margin-right: 20px;
@@ -185,7 +185,7 @@
 .elgg-river-attachments,
 .elgg-river-message,
 .elgg-river-content {
-	border-left: 1px solid <?php echo $tabbgcolor; ?>;
+	border-left: 1px solid <?php echo $tabbordercolor; ?>;
 	margin: 8px 0 5px 0;
 	padding-left: 8px;
 }
@@ -208,10 +208,10 @@
 .elgg-river-comments {
 	position: relative;
 	margin: 20px 0 0 0;
-	border-top: 1px solid <?php echo $tabbgcolor; ?>;
+	border-top: 1px solid <?php echo $tabbordercolor; ?>;
 }
 .elgg-river-comments > li {
-    border-color: <?php echo $tabbgcolor; ?>;
+    border-color: <?php echo $tabbordercolor; ?>;
     border-style: solid;
     border-width: 0 1px 1px 1px;
 	padding: 4px 10px;
@@ -223,7 +223,7 @@
 	padding: 0;
 }
 .elgg-river-more {
-    border-color: <?php echo $tabbgcolor; ?>;
+    border-color: <?php echo $tabbordercolor; ?>;
     border-style: solid;
     border-width: 0 1px 1px 1px;	
 	padding: 5px 10px;
@@ -231,7 +231,7 @@
 }
 
 .elgg-river-item form {
-    border-color: <?php echo $tabbgcolor; ?>;
+    border-color: <?php echo $tabbordercolor; ?>;
     border-style: solid;
     border-width: 0 1px 1px 1px;
 	padding: 6px;
@@ -252,10 +252,10 @@
 }
 .elgg-comments .elgg-list {
 	position: relative;
-    border-top: 1px solid <?php echo $tabbgcolor; ?>;
+    border-top: 1px solid <?php echo $tabbordercolor; ?>;
 }
 .elgg-comments .elgg-list > li {
-    border-color: <?php echo $tabbgcolor; ?>;
+    border-color: <?php echo $tabbordercolor; ?>;
     border-style: solid;
     border-width: 0 1px 1px 1px;
 	padding: 4px 10px;
@@ -306,7 +306,7 @@
 .elgg-comments .elgg-list:before,
 .elgg-river-comments:before {
 	border-color: rgba(220, 220, 220, 0);
-	border-bottom-color: <?php echo $tabbgcolor; ?>;
+	border-bottom-color: <?php echo $tabbordercolor; ?>;
 	border-width: 9px;
 	margin-left: -9px;
 }
@@ -315,7 +315,7 @@
 	Image-related
 *************************************** */
 .elgg-photo {
-	border: 1px solid <?php echo $tabbgcolor; ?>;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
 	padding: 3px;
 	background-color: #FFF;
 

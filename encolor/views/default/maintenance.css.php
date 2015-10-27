@@ -114,10 +114,10 @@ a {
 	padding-left: .4em;
 }
 .elgg-output table {
-	border: 1px solid <?php echo $tabbgcolor; ?>;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
 }
 .elgg-output table td {
-	border: 1px solid <?php echo $tabbgcolor; ?>;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
 	padding: 3px 5px;
 }
 .elgg-output img {
@@ -142,7 +142,7 @@ label {
 	font-size: 110%;
 }
 input, textarea {
-	border: 1px solid <?php echo $tabbgcolor; ?>;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
 	color: #666;
 	font: 100% Arial, Helvetica, sans-serif;
 	padding: 7px 6px;

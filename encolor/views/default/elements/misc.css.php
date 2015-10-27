@@ -20,7 +20,7 @@
 	border-right: 1px solid #EBEBEB;
 }
 #avatar-croppingtool {
-	border-top: 1px solid <?php echo $tabbgcolor; ?>;
+	border-top: 1px solid <?php echo $tabbordercolor; ?>;
 }
 #user-avatar-cropper {
 	float: left;

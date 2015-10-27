@@ -12,7 +12,7 @@
 	MISC
 *****************************************/
 #dashboard-info {
-	border: 1px solid <?php echo $tabbgcolor; ?>;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
 	margin: 0 10px 15px;
 }
 .elgg-sidebar input[type=text],
@@ -33,7 +33,7 @@
 	padding-bottom: 8px; /* forces button to reach bottom of topbar */
 }
 .elgg-menu-topbar > li > .elgg-topbar-dropdown:hover {
-	color: #EEE;
+	color: <?php echo $tabbgcolor; ?>;
 	cursor: default;
 }
 .elgg-menu-topbar-alt ul {
@@ -144,8 +144,8 @@ html {
     }
 	.elgg-sidebar {
 		border-left: none;
-		border-top: 1px solid <?php echo $tabbgcolor; ?>;
-		border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
+		border-top: 1px solid <?php echo $tabbordercolor; ?>;
+		border-bottom: 1px solid <?php echo $tabbordercolor; ?>;
 		background-color: #FAFAFA;
 		width: 100%;
 		float: left;
@@ -169,12 +169,12 @@ html {
 	.elgg-menu-page,
 	.elgg-sidebar .elgg-menu-owner-block,
 	.elgg-menu-groups-my-status {
-		border-bottom: 1px solid <?php echo $tabbgcolor; ?>;
+		border-bottom: 1px solid <?php echo $tabbordercolor; ?>;
 	}
 	.elgg-menu-page a,
 	.elgg-sidebar .elgg-menu-owner-block li a,
 	.elgg-menu-groups-my-status li a {
-		border-color: <?php echo $tabbgcolor; ?>;
+		border-color: <?php echo $tabbordercolor; ?>;
 		border-style: solid;
 		border-width: 1px 1px 0 1px;
 		margin: 0;
