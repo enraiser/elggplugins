@@ -184,7 +184,7 @@
 	float: left;
 }
 .elgg-menu-site > li > a {
-	color: <?php echo $bodybgcolor; ?>;
+	color: <?php echo $headerfontcolor; ?>;
 	padding: 14px 18px;
 }
 .elgg-menu-site > li > a:hover {
@@ -193,7 +193,7 @@
 .elgg-menu-site > .elgg-state-selected > a,
 .elgg-menu-site > li:hover > a {
 	background-color: <?php echo $headercolor; ?>;
-	color: <?php echo $bodybgcolor; ?>;
+	color: <?php echo $headerfontcolor; ?>;
 }
 .elgg-menu-site > li > ul {
 	position: absolute;
@@ -362,7 +362,7 @@
 	color: #FF0000;
 }
 .elgg-menu-hover-admin a:hover {
-	color: <?php echo $bodybgcolor; ?>;
+	color: #FFF;
 	background-color: #FF0000;
 }
 

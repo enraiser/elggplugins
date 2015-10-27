@@ -35,7 +35,10 @@ $bodyfontcolor = addcolordiff($headercolor,array(0.00,0.00,-100.00)); //replace 
 
 $tabbgcolor =  addcolordiff($bodybgcolor,array(0.00,0.00,-6.67)); //eee
 
-$tabbordercolor =  addcolordiff($tabbgcolor,array(0.00,0.00,-7.06));//DFDFDF
+$tabbordercolor =  addcolordiff($tabbgcolor,array(0.00,0.00,-7.06));//DFDFDF, I killed DCDCDC here
+
+
+
 
 
 
