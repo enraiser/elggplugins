@@ -21,7 +21,6 @@ elgg_register_event_handler('init', 'system', 'entheme_init');
 
 function entheme_init() {
 
-
 }
 
 
@@ -215,17 +214,17 @@ function colordiff($hex1,$hex2) {
 }
 
 function addcolordiff($color,$diff){
-    echo "<br>addcolordiff<br>".$diff[0]."/".$diff[1]."/".$diff[2];
+   // echo "<br>addcolordiff<br>".$diff[0]."/".$diff[1]."/".$diff[2];
     $rgb = hex2rgb($color);
-     echo $color." = ".$rgb[0]."/".$rgb[1]."/".$rgb[2]." hm<br>";
+   //  echo $color." = ".$rgb[0]."/".$rgb[1]."/".$rgb[2]." hm<br>";
     $hsv = RGBtoHSV($rgb);
-    echo "hsv = ".$hsv[0]."/".$hsv[1]."/".$hsv[2]." hm<br>";
+    //echo "hsv = ".$hsv[0]."/".$hsv[1]."/".$hsv[2]." hm<br>";
     $hsv2[0] = floatval($hsv[0]) +floatval($diff[0]);
     $hsv2[1] = $hsv[1] +$diff[1];
     $hsv2[2] = $hsv[2] +$diff[2];
-    echo "hsv2 = ".$hsv2[0]."/".$hsv2[1]."/".$hsv2[2]." <br>";
+  //  echo "hsv2 = ".$hsv2[0]."/".$hsv2[1]."/".$hsv2[2]." <br>";
     $rgb2 = HSVtoRGB($hsv2);
-    echo "rgb2 = ".$rgb2[0]."/".$rgb2[1]."/".$rgb2[2]." hm<br>";
+   // echo "rgb2 = ".$rgb2[0]."/".$rgb2[1]."/".$rgb2[2]." hm<br>";
     $hex2 = rgb2hex($rgb2);
     return $hex2;
 }
