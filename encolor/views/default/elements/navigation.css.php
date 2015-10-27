@@ -78,17 +78,17 @@
 	color: #666;
 }
 .elgg-tabs a:hover {
-	background: #DEDEDE;
+	background: <?php echo $tabbordercolor; ?>;
 	color: #444;
 }
 .elgg-tabs .elgg-state-selected {
 	border-color: <?php echo $tabbordercolor; ?>;
-	background: #FFF;
+	background: <?php echo $bodybgcolor; ?>;
 }
 .elgg-tabs .elgg-state-selected a {
 	position: relative;
 	top: 1px;
-	background: #FFF;
+	background: <?php echo $bodybgcolor; ?>;
 }
 
 /* ***************************************
@@ -184,7 +184,7 @@
 	float: left;
 }
 .elgg-menu-site > li > a {
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	padding: 14px 18px;
 }
 .elgg-menu-site > li > a:hover {
@@ -193,13 +193,13 @@
 .elgg-menu-site > .elgg-state-selected > a,
 .elgg-menu-site > li:hover > a {
 	background-color: <?php echo $headercolor; ?>;
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 }
 .elgg-menu-site > li > ul {
 	position: absolute;
 	display: none;
-	background-color: #FFF;
-	border: 1px solid #DEDEDE;
+	background-color: <?php echo $bodybgcolor; ?>;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
 	text-align: left;
 	top: 47px;
 	margin-left: 0;
@@ -216,7 +216,7 @@
 }
 .elgg-menu-site-more > li > a {
 	padding: 10px 20px;
-	background-color: #FFF;
+	background-color: <?php echo $bodybgcolor; ?>;
 	color: #444;
 }
 .elgg-menu-site-more > li:last-child > a,
@@ -265,7 +265,7 @@
 	border-radius: 3px 3px 0 0;
 }
 .elgg-menu-filter > li.elgg-state-selected a:hover {
-	background: #FFFFFF;
+	background: <?php echo $bodybgcolor; ?>;
 }
 .elgg-menu-filter > li > a {
 	text-decoration: none;
@@ -276,17 +276,17 @@
 	color: #666;
 }
 .elgg-menu-filter > li > a:hover {
-	background: #DEDEDE;
+	background: <?php echo $tabbordercolor; ?>;
 	color: #444;
 }
 .elgg-menu-filter > .elgg-state-selected {
 	border-color: <?php echo $tabbordercolor; ?>;
-	background: #FFF;
+	background: <?php echo $bodybgcolor; ?>;
 }
 .elgg-menu-filter > .elgg-state-selected > a {
 	position: relative;
 	top: 1px;
-	background: #FFF;
+	background: <?php echo $bodybgcolor; ?>;
 }
 
 /* ***************************************
@@ -336,8 +336,8 @@
 	overflow: hidden;
 	min-width: 180px;
 	max-width: 250px;
-	border: 1px solid #DEDEDE;
-	background-color: #FFF;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
+	background-color: <?php echo $bodybgcolor; ?>;
 
 	border-radius: 0 3px 3px 3px;
 	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.25);
@@ -362,7 +362,7 @@
 	color: #FF0000;
 }
 .elgg-menu-hover-admin a:hover {
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	background-color: #FF0000;
 }
 

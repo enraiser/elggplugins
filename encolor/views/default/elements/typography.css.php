@@ -91,7 +91,7 @@ h6 { font-size: 0.8em; }
 	font-family: Georgia, Times, "Times New Roman", serif;
 	font-size: 2em;
 	line-height: 1.2em;
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	text-shadow: 1px 1px 3px #333;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 	text-decoration: none;

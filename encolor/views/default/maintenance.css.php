@@ -46,8 +46,8 @@ a {
 	top: 0;
 	left: 0;
 	
-    background-color: #FFF;
-    border: 1px solid #DEDEDE;
+    background-color: <?php echo $bodybgcolor; ?>;
+    border: 1px solid <?php echo $tabbordercolor; ?>;
     padding: 10px;
 
 	border-radius: 3px;
@@ -183,7 +183,7 @@ input[type="radio"] {
 ************************** */
 .elgg-button {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	width: auto;
 	padding: 5px 12px;
 	cursor: pointer;
@@ -207,7 +207,7 @@ input[type="radio"] {
 	Messages
 *************************************** */
 .elgg-message {
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	display: block;
 	padding: 10px 20px;
 	cursor: pointer;

@@ -33,7 +33,7 @@
 	max-width: 990px;
 	margin: 0 auto;
 	padding: 5px 0;
-	border-top: 1px solid #DEDEDE;
+	border-top: 1px solid <?php echo $tabbordercolor; ?>;
 }
 
 /***** TOPBAR ******/

@@ -76,7 +76,7 @@
 	background-color: #DDD;
 }
 .elgg-table tr:nth-child(odd), .elgg-table tr.odd {
-	background-color: #FFF;
+	background-color: <?php echo $bodybgcolor; ?>;
 }
 .elgg-table tr:nth-child(even), .elgg-table tr.even {
 	background-color: #F0F0F0;
@@ -111,7 +111,7 @@
 	Messages
 *************************************** */
 .elgg-message {
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	display: block;
 	padding: 10px 20px;
 	cursor: pointer;
@@ -299,7 +299,7 @@
 .elgg-comments .elgg-list:after,
 .elgg-river-comments:after {
 	border-color: rgba(238, 238, 238, 0);
-	border-bottom-color: #FFF;
+	border-bottom-color: <?php echo $bodybgcolor; ?>;
 	border-width: 8px;
 	margin-left: -8px;
 }
@@ -317,7 +317,7 @@
 .elgg-photo {
 	border: 1px solid <?php echo $tabbordercolor; ?>;
 	padding: 3px;
-	background-color: #FFF;
+	background-color: <?php echo $bodybgcolor; ?>;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;

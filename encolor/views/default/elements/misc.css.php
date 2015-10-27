@@ -57,7 +57,7 @@
 	font-size: 70%;
 }
 #friends_collections_accordian .friends-picker-main-wrapper {
-	background: none repeat scroll 0 0 #FFF;
+	background: none repeat scroll 0 0 <?php echo $bodybgcolor; ?>;
 	display: none;
 	padding: 0;
 }

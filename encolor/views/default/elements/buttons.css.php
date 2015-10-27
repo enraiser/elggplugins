@@ -4,7 +4,7 @@
 ************************** */
 .elgg-button {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	width: auto;
 	padding: 6px 12px;
 	cursor: pointer;
@@ -28,7 +28,7 @@
 	background: #60B6F7;
 }
 .elgg-button-submit.elgg-state-disabled {
-	background: #DEDEDE;
+	background: <?php echo $tabbordercolor; ?>;
 	cursor: default;
 }
 .elgg-button-cancel {
@@ -46,7 +46,7 @@
 }
 .elgg-button-action:hover,
 .elgg-button-action:focus {
-	background: #DEDEDE;
+	background: <?php echo $tabbordercolor; ?>;
 	color: #333;
 }
 .elgg-button-delete {
@@ -63,7 +63,7 @@
 	display: block;
 	position: relative;
 	margin-left: 0;
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	border: none;
 	box-shadow: none;
 	border-radius: 0;
@@ -71,7 +71,7 @@
 .elgg-button-dropdown:hover,
 .elgg-button-dropdown:focus,
 .elgg-button-dropdown.elgg-state-active {
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	background: <?php echo $headercolor; ?>;
 	text-decoration: none;
 }

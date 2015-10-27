@@ -39,8 +39,8 @@
 .elgg-menu-topbar-alt ul {
 	position: absolute;
 	display: none;
-	background-color: #FFF;
-	border: 1px solid #DEDEDE;
+	background-color: <?php echo $bodybgcolor; ?>;
+	border: 1px solid <?php echo $tabbordercolor; ?>;
 	text-align: left;
 	top: 33px;
 	margin-left: -100px;
@@ -52,7 +52,7 @@
 .elgg-menu-topbar-alt li ul > li > a {
 	text-decoration: none;
 	padding: 10px 20px;
-	background-color: #FFF;
+	background-color: <?php echo $bodybgcolor; ?>;
 	color: #444;
 }
 .elgg-menu-topbar-alt li ul > li > a:hover {
@@ -93,12 +93,12 @@ html {
 .elgg-button-nav {
 	display: none;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	float: left;
 	padding: 14px 18px;
 }
 .elgg-button-nav:hover {
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	text-decoration: none;
 	background-color: <?php echo $headercolor; ?>;
 }
@@ -179,7 +179,7 @@ html {
 		border-width: 1px 1px 0 1px;
 		margin: 0;
 		padding: 10px;
-		background-color: #FFFFFF;
+		background-color: <?php echo $bodybgcolor; ?>;
 	}
 	.elgg-menu-page a:hover,
 	.elgg-sidebar .elgg-menu-owner-block li a:hover,
@@ -287,7 +287,7 @@ html {
 		padding: 10px 18px;
 	}
 	.elgg-menu-site-more > li > a {
-		color: #FFF;
+		color: <?php echo $bodybgcolor; ?>;
 		background: none;
 		padding: 10px 18px 10px 30px;
 	}
@@ -298,7 +298,7 @@ html {
 	.elgg-menu-site-more > li.elgg-state-selected > a,
 	.elgg-menu-site-more > li > a:hover {
 		background-color: <?php echo $headercolor; ?>;
-		color: #FFF;
+		color: <?php echo $bodybgcolor; ?>;
 	}
 }
 @media (max-width: 600px) {

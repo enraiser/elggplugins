@@ -41,7 +41,7 @@
 }
 /*** topbar icon ***/
 .messages-new {
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	background-color: #FF0000;
 	border-radius: 10px;
 	box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.50);

@@ -113,11 +113,11 @@ select {
 	padding: 0;
 	width: 720px;
 	height: auto;
-	background-color: #DEDEDE;
+	background-color: <?php echo $tabbordercolor; ?>;
 	border-radius: 3px;
 }
 .friendspicker-savebuttons {
-	background: #FFF;
+	background: <?php echo $bodybgcolor; ?>;
 	border-radius: 3px;
 	margin:0 10px 10px;
 }
@@ -153,12 +153,12 @@ select {
 .friends-picker-navigation ul li {
 	float: left;
 	margin: 0;
-	background: #FFF;
+	background: <?php echo $bodybgcolor; ?>;
 }
 .friends-picker-navigation a {
 	font-weight: bold;
 	text-align: center;
-	background: #FFF;
+	background: <?php echo $bodybgcolor; ?>;
 	color: #999;
 	text-decoration: none;
 	display: block;
@@ -167,16 +167,16 @@ select {
 	border-radius: 3px;
 }
 .tabHasContent {
-	background: #FFF;
+	background: <?php echo $bodybgcolor; ?>;
 	color: #333 !important;
 }
 .friends-picker-navigation li a:hover {
 	background: #333;
-	color: #FFF !important;
+	color: <?php echo $bodybgcolor; ?> !important;
 }
 .friends-picker-navigation li a.current {
 	background: #5097CF;
-	color: #FFF !important;
+	color: <?php echo $bodybgcolor; ?> !important;
 }
 .friends-picker-navigation-l, .friends-picker-navigation-r {
 	position: absolute;
@@ -230,7 +230,7 @@ select {
 	max-width: 600px;
 }
 .ui-autocomplete {
-	background-color: #FFF;
+	background-color: <?php echo $bodybgcolor; ?>;
 	border: 1px solid <?php echo $tabbordercolor; ?>;
 	overflow: hidden;
 	border-radius: 3px;
@@ -276,7 +276,7 @@ select {
 	display: none;
 
 	margin-top: 3px;
-	background-color: #FFF;
+	background-color: <?php echo $bodybgcolor; ?>;
 	border: 1px solid #0054A7;
 	border-radius: 3px;
 	overflow: hidden;
@@ -289,18 +289,18 @@ select {
 .ui-datepicker-header {
 	position: relative;
 	background: #5097CF;
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 	padding: 2px 0;
 	border-bottom: 1px solid #0054A7;
 }
 .ui-datepicker-header a {
-	color: #FFF;
+	color: <?php echo $bodybgcolor; ?>;
 }
 .ui-datepicker-prev, .ui-datepicker-next {
 	position: absolute;
 	top: 3px;
 	cursor: pointer;
-	border: 1px solid #fff;
+	border: 1px solid <?php echo $bodybgcolor; ?>;
 	border-radius: 3px;
 	padding: 1px 7px;
 }
