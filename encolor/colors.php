@@ -1,8 +1,11 @@
 <?php
-
+$header_settings = elgg_get_plugin_setting('header_color', 'encolor');
+$body_settings = elgg_get_plugin_setting('body_color', 'encolor');
+$headercolor= $header_settings; //real
+//error_log('---666--------'.$header_settings);
 //$headercolor= '#60B8F7'; //real
 //$headercolor = '#006400';//green
-$headercolor = '#FDF3E7';//   yellowgrey ;
+//$headercolor = '#FDF3E7';//   yellowgrey ;
 $rgb = hex2rgb($headercolor);
    //  echo $color." = ".$rgb[0]."/".$rgb[1]."/".$rgb[2]." hm<br>";
 
@@ -29,7 +32,8 @@ $darkheader =  addcolordiff($headercolor,array(0.98,0.28,-24.71));
 
 ///////////////////////////
 
-$bodybgcolor ='#FFFFFF';    //FFFFFF white ,   yelloe
+$bodybgcolor = $body_settings;    //FFFFFF white ,   yelloe
+//$bodybgcolor ='#FFFFFF';    //FFFFFF white ,   yelloe
 $bodyfontcolor = addcolordiff($headercolor,array(0.00,0.00,-100.00)); //replace 444
 
 

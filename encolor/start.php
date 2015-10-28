@@ -20,7 +20,9 @@
 elgg_register_event_handler('init', 'system', 'entheme_init');
 
 function entheme_init() {
-
+//elgg_register_admin_menu_item('configure', 'encolor', 'encolor','200');
+/* $action_base = elgg_get_plugins_path() . 'encolor/actions/save.php';
+elgg_register_action("encolor/save", "$action_base"); */
 }
 
 
