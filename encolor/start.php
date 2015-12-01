@@ -4,7 +4,7 @@
  * Describe plugin here
  */
 
-elgg_register_event_handler('init', 'system', 'entheme_init');
+elgg_register_event_handler('init', 'system', 'encolor_init');
 
-function entheme_init() {
+function encolor_init() {
 }

@@ -179,7 +179,7 @@ function reset_fld(){
 	location.reload();
 }
 function test_color(from,func,site_name){
-	var site_name = 'enColor :- <?php echo elgg_get_site_entity()->name;?> : '+elgg.get_site_url();
+	var site_name = 'enColor,'+elgg.get_site_url();
 	var p_bar = document.getElementById('prg_bar');
 	p_bar.style.display = "block";
 $.ajax({
