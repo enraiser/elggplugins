@@ -1,51 +1,18 @@
 <?php
-$header_settings = elgg_get_plugin_setting('header_color', 'encolor');
-$body_settings = elgg_get_plugin_setting('body_color', 'encolor');
-$headercolor= $header_settings; //real
-//error_log('---666--------'.$header_settings);
-//$headercolor= '#60B8F7'; //real
-//$headercolor = '#006400';//green
-//$headercolor = '#FDF3E7';//   yellowgrey ;
-$rgb = hex2rgb($headercolor);
-   //  echo $color." = ".$rgb[0]."/".$rgb[1]."/".$rgb[2]." hm<br>";
 
-$hsv = RGBtoHSV($rgb);
+/////////////Header Params
+$headercolor= elgg_get_plugin_setting('header_color', 'encolor'); //real
 
-
-
-$hsvfont = $hsv;
-
-//echo "<br>";
-$hsvfont = $hsv;
-$hsvfont[1] = 100.00 - $hsvfont[1];
-$hsvfont[2] = 100.00 - $hsvfont[2];
-$hsvfont[0]= ($hsvfont[0] + 180) % 360;
-
-
-
-$headerfontcolor = rgb2hex(HSVtoRGB($hsvfont));//addcolordiff($headercolor,array(0.00,0.00,-100.00)); //replace 444
-
-
-$darkheader =  addcolordiff($headercolor,array(0.98,0.28,-24.71));
+$darkheader =  elgg_get_plugin_setting('darkheader_color', 'encolor');  //addcolordiff($headercolor,array(0.98,0.28,-24.71));
 //the font here is bodybgcolor
+$headerfontcolor = elgg_get_plugin_setting('invert_color', 'encolor'); 
+$bodyfontcolor = elgg_get_plugin_setting('bodyfont_color', 'encolor');   //addcolordiff($headercolor,array(0.00,0.00,-100.00)); //replace 444  
 
 
-///////////////////////////
-
-$bodybgcolor = $body_settings;    //FFFFFF white ,   yelloe
+/////////////Body Params
+$bodybgcolor = elgg_get_plugin_setting('body_color', 'encolor');    //FFFFFF white ,   yelloe
 //$bodybgcolor ='#FFFFFF';    //FFFFFF white ,   yelloe
-$bodyfontcolor = addcolordiff($headercolor,array(0.00,0.00,-100.00)); //replace 444
 
-
-$tabbgcolor =  addcolordiff($bodybgcolor,array(0.00,0.00,-6.67)); //eee
-
-$tabbordercolor =  addcolordiff($tabbgcolor,array(0.00,0.00,-7.06));//DFDFDF, I killed DCDCDC here
-
-
-
-
-
-
-
-
-
+$tabbgcolor =  elgg_get_plugin_setting('tabbg_color', 'encolor');   
+//addcolordiff($bodybgcolor,array(0.00,0.00,-6.67)); //eee
+$tabbordercolor =  elgg_get_plugin_setting('tabborder_color', 'encolor');  
