@@ -1,6 +1,7 @@
 <?php
 /**
- * Custom Index CSS
+ * Custom Index CSS, modified by enRaiser
+ * visit http://www.enraiser.com
  *
  */
 ?>

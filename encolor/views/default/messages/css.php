@@ -1,6 +1,7 @@
 <?php
 /**
- * Elgg Messages CSS
+ * Elgg Messages CSS, modified by enRaiser
+ * visit http://www.enraiser.com
  *
  * @package ElggMessages
  */

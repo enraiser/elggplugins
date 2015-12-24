@@ -1,6 +1,7 @@
 <?php require  elgg_get_plugins_path()."encolor/colors.php"; ?>
 /**
- * Navigation
+ * Navigation, modified by enRaiser
+ * visit http://www.enraiser.com
  */
 
 /* ***************************************

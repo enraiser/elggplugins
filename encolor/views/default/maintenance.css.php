@@ -1,6 +1,7 @@
 <?php
 /**
- * Maintenance mode CSS
+ * Maintenance mode CSS, modified by enRaiser
+ * visit http://www.enraiser.com
  */
 
 echo elgg_view('elements/reset.css', $vars);

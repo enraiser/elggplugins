@@ -1,6 +1,7 @@
 <?php require  elgg_get_plugins_path()."encolor/colors.php"; ?>
 /**
- * Layout Object CSS
+ * Layout Object CSS, modified by enRaiser
+ * visit http://www.enraiser.com
  *
  * Image blocks, lists, tables, gallery, messages
  */

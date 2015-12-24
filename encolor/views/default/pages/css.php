@@ -1,6 +1,7 @@
 <?php
 /**
- * Elgg Pages CSS
+ * Elgg Pages CSS, modified by enRaiser
+ * visit http://www.enraiser.com
  *
  * @package ElggPages
  */

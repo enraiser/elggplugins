@@ -1,10 +1,8 @@
 <?php require  elgg_get_plugins_path()."encolor/colors.php"; ?>
-body {
-background-color:<?php echo $bodybgcolor;?> !important;
-    color: #333;
-}
+
 /**
- * CSS typography
+ * CSS typography, modified by enRaiser
+ * visit http://www.enraiser.com
  */
 
 /* ***************************************
@@ -15,6 +13,7 @@ body {
 	font-size: 90%;
 	line-height: 1.4em;
 	font-family: "Helvetica Neue", Helvetica, "Lucida Grande", Arial, sans-serif;
+    background-color:<?php echo $bodybgcolor;?> !important;
 }
 
 a {

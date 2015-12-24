@@ -1,6 +1,7 @@
 <?php
 /**
- * Elgg Groups css
+ * Elgg Groups css, modified by enRaiser
+ * visit http://www.enraiser.com
  *
  * @package groups
  */

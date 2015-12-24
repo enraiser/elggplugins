@@ -1,6 +1,7 @@
 <?php
 /**
- * Elgg Profile CSS
+ * Elgg Profile CSS, modified by enRaiser
+ * visit http://www.enraiser.com
  *
  * @package Profile
  */

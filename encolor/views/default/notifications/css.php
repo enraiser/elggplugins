@@ -1,6 +1,7 @@
 <?php
 /**
- * Elgg notifications CSS
+ * Elgg notifications CSS, modified by enRaiser
+ * visit http://www.enraiser.com
  *
  * @package notifications
  */

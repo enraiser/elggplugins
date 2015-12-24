@@ -1,6 +1,7 @@
 /* <style> /**/
 /**
- * CSS form/input elements
+ * CSS form/input elements, modified by enRaiser
+ * visit http://www.enraiser.com
  */
 
 /* ***************************************

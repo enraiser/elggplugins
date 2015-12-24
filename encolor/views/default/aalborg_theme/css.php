@@ -3,7 +3,8 @@
  * CSS Aalborg theme
  *
  * @package AalborgTheme
- * @subpackage UI
+ * @subpackage UI, modified by enRaiser
+ * visit http://www.enraiser.com
  */
 ?>
 /* <style> /**/

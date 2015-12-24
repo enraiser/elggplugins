@@ -1,6 +1,7 @@
 <?php
 /**
- * Elgg Search css
+ * Elgg Search css, modified by enRaiser
+ * visit http://www.enraiser.com
  *
  */
 ?>

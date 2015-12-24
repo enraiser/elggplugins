@@ -1,6 +1,7 @@
 <?php require  elgg_get_plugins_path()."encolor/colors.php"; ?>
 /* **************************
-	BUTTONS
+	BUTTONS, modified by enRaiser
+ * visit http://www.enraiser.com
 ************************** */
 .elgg-button {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;

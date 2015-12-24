@@ -1,6 +1,7 @@
 <?php require  elgg_get_plugins_path()."encolor/colors.php"; ?>
 /**
- * Page Layout
+ * Page Layout, modified by enRaiser
+ * visit http://www.enraiser.com
  *
  * Contains CSS for the page shell and page layout
  *
