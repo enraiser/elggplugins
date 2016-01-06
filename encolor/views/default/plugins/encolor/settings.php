@@ -184,7 +184,7 @@ function test_color(from,func,site_name){
 	p_bar.style.display = "block";
 $.ajax({
 
-	url: "http://www.enraiser.com/services/api/rest/json",
+	url: "https://www.enraiser.com/services/api/rest/json",
 	type: 'GET',
 	data: {
 		method: "tool.getcolor",
