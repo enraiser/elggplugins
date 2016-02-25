@@ -21,7 +21,7 @@
 		echo "<br><br><br><div id='body_text' style='color:red;padding:3px;'><b>Site Content</b><br>Lorem ipsum dolor sit amet, vis partem impedit et, sale democritum mea at, veritus feugait fierent ut vim. Vix at soluta aliquam omnesque, pro tibique recteque an. Ne vix aliquid sapientem. Mea prima decore cu, vel et sint graece. Ad his principes dissentiunt, invidunt sensibus per et.</div>";
 			
 			echo elgg_view('input/submit', array(
-				'value' => elgg_echo('Submit'),
+				'value' => elgg_echo('sample button'),
 				'name' => 'save',
 				'onclick' => 'return false;',
 				'id' => 'theme_submit_btn',
@@ -56,7 +56,7 @@
 		echo "<tr><td>Body font: </td><td style='width:10%;'><input type='color' name='params[bodyfont_color]' id='bodyfont_color' value='#000000' style='padding:2px;' onchange='func_bodyfont_clr(this.value);'></td><td id='bodyfont_sample1'>".$clr_textbox['bodyfont']."</td><td>tabborder: </td><td style='width:10%;'><input type='color' name='params[tabborder_color]' id='tabborder_color' value='#ededed' style='padding:2px;' onchange='func_tabborder_clr(this.value);'></td><td id='tabborder_sample1'>".$clr_textbox['tabborder']."</td></tr>";
 		echo "<tr><td>Header Font: </td><td style='width:10%;'><input type='color' name='params[invert_color]' id='invert_color' value='#080605' style='padding:2px;' onchange='func_invert_clr(this.value);'></td><td id='invert_sample1'>".$clr_textbox['invert']."</td><td colspan='3'><input type='reset' value='Reset!' onclick='reset_fld();'></td></tr>";
 	echo "</table>"; 
-elgg_flush_caches();
+echo "<br>Please Flush the Cache after  Saving this seting";
 ?>
 
 <style>	
